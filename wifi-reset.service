@@ -1,5 +1,9 @@
 [Unit]
-Description=Wireless Network Reset
+Description=WiFi Reset
+#After=systemd-rfkill.service 
+#After=wpa_supplicant.service 
+#After=connman.service
+After=getty.target
 
 [Service]
 Type=oneshot

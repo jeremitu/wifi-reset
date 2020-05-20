@@ -1,7 +1,7 @@
 WiFi Reset Service
 ==================
 
-Systemd service to reset (ifdown &amp; ifup) all wireless interfaces on boot.  Greatly improves reliability of wifi adapters on the BeagleBone Black's Debian OS with 3.8 kernel.
+Systemd service to reset (rfkill block &amp; unblock) all wireless interfaces on boot.  Greatly improves reliability of wifi adapters on the BeagleBone Black's Debian OS with 3.8 kernel.
 
 Installation
 ============
@@ -29,7 +29,7 @@ Installing systemd service to run at boot.
 Enabling systemd service.
 ````
 
-That's it!  On boot the service will reset (run ifdown and ifup) all wifi interfaces.
+That's it!  On boot the service will reset (run rfkill block and unblock) all wireless interfaces.
 
 If you'd ever like to disable the service, run the command:
 
